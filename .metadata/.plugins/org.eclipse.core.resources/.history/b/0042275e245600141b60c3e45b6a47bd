@@ -1,0 +1,15 @@
+package com.vpa.view;
+import java.awt.*;
+import java.awt.event.*;
+import javax.swing.*;
+import java.util.Locale;
+import java.util.ResourceBundle;
+import javax.swing.JPanel;
+
+public class Imagem extends JPanel
+{
+	public Imagem(URL url)
+	{
+		
+	}
+}

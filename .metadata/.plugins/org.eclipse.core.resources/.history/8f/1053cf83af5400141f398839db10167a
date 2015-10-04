@@ -1,0 +1,23 @@
+package com.vpa.view;
+
+public class Teste 
+{
+	private String ling;
+	
+	public static void main(String[] args) 
+	{
+		Linguagem l = new Linguagem();
+
+	}
+
+	public String getLing() {
+		return ling;
+	}
+
+	public void setLing(String ling) {
+		this.ling = ling;
+	}
+	
+	
+	
+}

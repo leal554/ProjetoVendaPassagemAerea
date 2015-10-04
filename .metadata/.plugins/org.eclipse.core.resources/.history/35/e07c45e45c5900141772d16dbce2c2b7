@@ -1,0 +1,34 @@
+package com.vpa.view;
+
+iimport java.awt.*;
+import java.awt.BorderLayout;
+import java.awt.GridLayout;
+import java.awt.event.*;
+
+import javax.swing.*;
+
+public class TesteRadio extends JFrame implements ActionListener
+{
+	public TesteRadio()
+	{
+		setTitle("Teste");
+		setBounds(200, 150, 750,400);
+		
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setVisible(true);
+		
+		
+		JPanel tela = new JPanel();
+		tela.setLayout(new BorderLayout());
+		
+		JPanel radioB = new JPanel();
+		radioB.setLayout(new GridLayout(3,27));
+		
+	}
+
+	@Override
+	public void actionPerformed(ActionEvent arg0) {
+		// TODO Auto-generated method stub
+		
+	}
+}

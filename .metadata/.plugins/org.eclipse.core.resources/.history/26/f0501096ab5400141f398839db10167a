@@ -1,0 +1,65 @@
+package com.vpa.view;
+import javax.swing.*;
+import java.util.Locale;
+import java.util.ResourceBundle;
+
+public class LinguagemSelecao
+{
+   private int ling = 0;
+   private ResourceBundle bn = null;
+   
+   public LinguagemSelecao(){}
+  
+   /*
+   public LinguagemSelecao(int l)
+   {
+      this.ling = l;
+      
+      switch(this.ling)
+      {
+         case 1:
+         { 
+            bn = ResourceBundle.getBundle("messages", new Locale("en", "US"));
+            break;
+         }
+         case 2:
+         {
+            bn = ResourceBundle.getBundle("messages", new Locale("pt", "BR"));
+            break;
+         }
+         default:
+            JOptionPane.showMessageDialog(null,"Erro: Seleção de Linguagem " + ling,"Erro",JOptionPane.WARNING_MESSAGE);
+            System.exit(0);
+      }
+   }
+   */
+   
+   public LinguagemSelecao(int li)
+   {
+      ling = li;
+      
+         if(ling == 1)
+         { 
+            bn = ResourceBundle.getBundle("messages", new Locale("en", "US"));
+         }
+         if(ling == 2)
+         {
+            bn = ResourceBundle.getBundle("messages", new Locale("pt", "BR"));
+         }
+         else
+         {
+            JOptionPane.showMessageDialog(null,"Erro: Seleção de Linguagem " + ling,"Erro",JOptionPane.WARNING_MESSAGE);
+           // System.exit(0);
+         }
+   }
+   
+
+   public void setLing(int ling)
+   {
+      this.ling = ling;
+   }
+   public ResourceBundle getLinguagem()
+   {
+      return bn;
+   }
+}

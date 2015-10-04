@@ -1,0 +1,207 @@
+package com.vpa.view;
+import java.awt.*;
+import java.awt.event.*;
+import javax.swing.*;
+
+import java.util.Locale;
+import java.util.ResourceBundle;
+public class Radio extends JFrame implements ActionListener
+{
+	public Radio()
+	{
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setVisible(true);
+		
+		setTitle("Check-in");
+		setBounds(300,50,350,350);
+		getContentPane().setLayout(new GridLayout(1,0));
+	
+		JRadioButton acento = new JRadioButton("01");
+		acento.setMnemonic(KeyEvent.VK_B);
+		acento.setActionCommand("01");
+		acento.setSelected(true);
+		acento.addActionListener(this);
+		
+		JRadioButton acento = new JRadioButton("02");
+		acento.setMnemonic(KeyEvent.VK_B);
+		acento.setActionCommand("01");
+		acento.setSelected(true);
+		acento.addActionListener(this);
+		
+		JRadioButton acento = new JRadioButton("03");
+		acento.setMnemonic(KeyEvent.VK_B);
+		acento.setActionCommand("01");
+		acento.setSelected(true);
+		acento.addActionListener(this);
+		
+		JRadioButton acento = new JRadioButton("04");
+		acento.setMnemonic(KeyEvent.VK_B);
+		acento.setActionCommand("01");
+		acento.setSelected(true);
+		acento.addActionListener(this);
+		
+		JRadioButton acento = new JRadioButton("05");
+		acento.setMnemonic(KeyEvent.VK_B);
+		acento.setActionCommand("01");
+		acento.setSelected(true);
+		acento.addActionListener(this);
+		
+		JRadioButton acento = new JRadioButton("06");
+		acento.setMnemonic(KeyEvent.VK_B);
+		acento.setActionCommand("01");
+		acento.setSelected(true);
+		acento.addActionListener(this);
+		
+		JRadioButton acento = new JRadioButton("07");
+		acento.setMnemonic(KeyEvent.VK_B);
+		acento.setActionCommand("01");
+		acento.setSelected(true);
+		acento.addActionListener(this);
+		
+		JRadioButton acento = new JRadioButton("08");
+		acento.setMnemonic(KeyEvent.VK_B);
+		acento.setActionCommand("01");
+		acento.setSelected(true);
+		acento.addActionListener(this);
+		
+		JRadioButton acento = new JRadioButton("09");
+		acento.setMnemonic(KeyEvent.VK_B);
+		acento.setActionCommand("01");
+		acento.setSelected(true);
+		acento.addActionListener(this);
+		
+		JRadioButton acento = new JRadioButton("10");
+		acento.setMnemonic(KeyEvent.VK_B);
+		acento.setActionCommand("01");
+		acento.setSelected(true);
+		acento.addActionListener(this);
+		
+		JRadioButton acento = new JRadioButton("11");
+		acento.setMnemonic(KeyEvent.VK_B);
+		acento.setActionCommand("01");
+		acento.setSelected(true);
+		acento.addActionListener(this);
+		
+		JRadioButton acento = new JRadioButton("12");
+		acento.setMnemonic(KeyEvent.VK_B);
+		acento.setActionCommand("01");
+		acento.setSelected(true);
+		acento.addActionListener(this);
+		
+		JRadioButton acento = new JRadioButton("13");
+		acento.setMnemonic(KeyEvent.VK_B);
+		acento.setActionCommand("01");
+		acento.setSelected(true);
+		acento.addActionListener(this);
+		
+		JRadioButton acento = new JRadioButton("14");
+		acento.setMnemonic(KeyEvent.VK_B);
+		acento.setActionCommand("01");
+		acento.setSelected(true);
+		acento.addActionListener(this);
+		
+		JRadioButton acento = new JRadioButton("15");
+		acento.setMnemonic(KeyEvent.VK_B);
+		acento.setActionCommand("01");
+		acento.setSelected(true);
+		acento.addActionListener(this);
+		
+		JRadioButton acento = new JRadioButton("16");
+		acento.setMnemonic(KeyEvent.VK_B);
+		acento.setActionCommand("01");
+		acento.setSelected(true);
+		acento.addActionListener(this);
+		
+		JRadioButton acento = new JRadioButton("17");
+		acento.setMnemonic(KeyEvent.VK_B);
+		acento.setActionCommand("01");
+		acento.setSelected(true);
+		acento.addActionListener(this);
+		
+		JRadioButton acento = new JRadioButton("18");
+		acento.setMnemonic(KeyEvent.VK_B);
+		acento.setActionCommand("01");
+		acento.setSelected(true);
+		acento.addActionListener(this);
+		
+		JRadioButton acento = new JRadioButton("19");
+		acento.setMnemonic(KeyEvent.VK_B);
+		acento.setActionCommand("01");
+		acento.setSelected(true);
+		acento.addActionListener(this);
+		
+		JRadioButton acento = new JRadioButton("20");
+		acento.setMnemonic(KeyEvent.VK_B);
+		acento.setActionCommand("01");
+		acento.setSelected(true);
+		acento.addActionListener(this);
+		
+		JRadioButton acento = new JRadioButton("21");
+		acento.setMnemonic(KeyEvent.VK_B);
+		acento.setActionCommand("01");
+		acento.setSelected(true);
+		acento.addActionListener(this);
+		
+		JRadioButton acento = new JRadioButton("22");
+		acento.setMnemonic(KeyEvent.VK_B);
+		acento.setActionCommand("01");
+		acento.setSelected(true);
+		acento.addActionListener(this);
+		
+		JRadioButton acento = new JRadioButton("23");
+		acento.setMnemonic(KeyEvent.VK_B);
+		acento.setActionCommand("01");
+		acento.setSelected(true);
+		acento.addActionListener(this);
+		
+		JRadioButton acento = new JRadioButton("24");
+		acento.setMnemonic(KeyEvent.VK_B);
+		acento.setActionCommand("01");
+		acento.setSelected(true);
+		acento.addActionListener(this);
+		
+		JRadioButton acento = new JRadioButton("25");
+		acento.setMnemonic(KeyEvent.VK_B);
+		acento.setActionCommand("01");
+		acento.setSelected(true);
+		acento.addActionListener(this);
+		
+		JRadioButton acento = new JRadioButton("26");
+		acento.setMnemonic(KeyEvent.VK_B);
+		acento.setActionCommand("01");
+		acento.setSelected(true);
+		acento.addActionListener(this);
+		
+		JRadioButton acento = new JRadioButton("27");
+		acento.setMnemonic(KeyEvent.VK_B);
+		acento.setActionCommand("01");
+		acento.setSelected(true);
+		acento.addActionListener(this);
+		
+		JRadioButton acento = new JRadioButton("28");
+		acento.setMnemonic(KeyEvent.VK_B);
+		acento.setActionCommand("01");
+		acento.setSelected(true);
+		acento.addActionListener(this);
+		
+		JRadioButton acento = new JRadioButton("29");
+		acento.setMnemonic(KeyEvent.VK_B);
+		acento.setActionCommand("01");
+		acento.setSelected(true);
+		acento.addActionListener(this);
+		
+		
+    
+    
+    	getContentPane().add(acento);
+	}
+	public void actionPerformed(ActionEvent e)
+	{
+		
+	}
+	
+	public static void main (String [] args)
+	{
+		Radio r = new Radio();
+	}
+}

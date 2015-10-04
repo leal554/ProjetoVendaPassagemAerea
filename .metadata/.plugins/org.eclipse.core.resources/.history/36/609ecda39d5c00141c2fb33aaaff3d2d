@@ -1,0 +1,46 @@
+package com.vpa.controle;
+
+import java.sql.SQLException;
+import java.sql.Connection;
+import java.util.Date;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+
+import com.vpa.model.ConexaoDAO;
+
+public class Aeronave 
+{
+	private String numeroDaAeronave;
+	private String numeroDeAcentos;
+	
+	public Aeronave(String numeroDaAeronave, String numeroDeAcentos)
+	{
+		if(numeroDaAeronave.equals(0) )
+		{
+			this.numeroDaAeronave = numeroDaAeronave;
+		}
+		if(numeroDeAcentos)
+		{
+			this.numeroDeAcentos = numeroDeAcentos;
+		}
+	}
+	
+	public String getNumeroDaAeronave() 
+	{
+		return numeroDaAeronave;
+	}
+	public void setNumeroDaAeronave(String numeroDaAeronave) 
+	{
+		this.numeroDaAeronave = numeroDaAeronave;
+	}
+	public String getNumeroDeAcentos() 
+	{
+		return numeroDeAcentos;
+	}
+	public void setNumeroDeAcentos(String numeroDeAcentos) 
+	{
+		this.numeroDeAcentos = numeroDeAcentos;
+	}
+	
+	
+}

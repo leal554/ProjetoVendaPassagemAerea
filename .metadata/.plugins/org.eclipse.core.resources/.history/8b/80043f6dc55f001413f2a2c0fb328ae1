@@ -1,0 +1,76 @@
+package com.vpa.view;
+/*
+// Grupo: 
+//
+// 2MSIN
+//
+// Gabriel de Sousa Leal / RA: 201202909
+//
+// Andre Pacetti Dassa / RA: 201202384
+//
+// Eduardo Américo Rodrigues Lopes / RA: 201206168
+//
+*/
+
+import java.awt.*;
+import java.awt.event.*;
+import javax.swing.*;
+import java.util.Locale;
+import java.util.ResourceBundle;
+
+public class TransferenciaPassagem extends JFrame implements ActionListener
+{
+   JButton Transferir, voltar;
+   JLabel info, label0, idBeneficiario, idPassagem;
+   JTextField texto1,texto2;
+   private ResourceBundle bn = ResourceBundle.getBundle("messages", Locale.getDefault());
+   
+	public TransferenciaPassagem()
+	{		
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setVisible(true);
+       
+		setTitle("Transferencia de Passagem");
+		setBounds(300,50,350,350);
+		
+      Container tela = getContentPane();
+      tela.setLayout(new GridLayout(0,2));
+      
+      info = new JLabel("Digite os Dados do Beneficiario");
+      
+      label0 = new JLabel("");
+      
+      idBeneficiario = new JLabel("Digite Id Do Beneficiario");
+      texto1 = new JTextField();
+      
+      idPassagem = new JLabel("Digite o Id da Passagem a ser Transferida");
+      texto2 = new JTextField();
+     
+      Transferir = new JButton(bn.getString("Transferir"));
+      Transferir.addActionListener(this);
+      
+      voltar = new JButton(bn.getString("transferenciaPassagem.botVoltar"));
+      voltar.addActionListener(this);
+      
+      tela.add(info);
+      tela.add(label0);
+      tela.add(idBeneficiario);
+      tela.add(texto1);
+      tela.add(idPassagem);
+      tela.add(texto2);
+      tela.add(Transferir);
+      tela.add(voltar);
+      
+		
+	}
+	
+	public void actionPerformed(ActionEvent e)
+	{
+		
+	}
+	
+	public static void main(String [] args)
+	{
+		TransferenciaPassagem t = new TransferenciaPassagem();
+	}
+}

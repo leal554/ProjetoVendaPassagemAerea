@@ -1,0 +1,102 @@
+package com.vpa.model;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+import java.sql.ResultSet;
+import java.util.ArrayList;
+
+import javax.swing.JOptionPane;
+
+import com.vpa.controle.Aeronave;
+import com.vpa.model.ConexaoDAO;
+
+public class AeronaveDAO 
+{
+	Aeronave a = new Aeronave();
+	
+	public void incluirAeronave(Connection conn)
+	{
+		String sqlInsert = "INSERT INTO aeronave(numeroDaAeronave, numeroDeAcentos) VALUES (?, ?, ?)";
+		PreparedStatement stm = null;
+		
+		try 
+		{
+			stm = conn.prepareStatement(sqlInsert);
+			stm.setString(1,a.getNumeroDaAeronave());
+			stm.setString(2,a.getNumeroDeAcentos());
+			stm.execute();
+		
+		}
+		catch(Exception e)
+		{
+			e.printStackTrace();
+			try
+			{
+				conn.rollback();
+			}
+			catch (SQLException e1)
+			{
+				JOptionPane.showMessageDialog(null,e1.getStackTrace());
+			}
+			finally
+			{
+				if (stm != null)
+				{
+					try
+					{
+						stm.close();
+					}
+					catch (SQLException e1)
+					{
+						JOptionPane.showMessageDialog(null,e1.getStackTrace());
+					}
+				}
+			}
+		}
+	}
+	
+	public void excluir(String numeroDaAeronave, Connection conn)
+	{
+		String sqlDelete = "DELETE FROM pedido WHERE id = ?";
+		PreparedStatement stm = null;
+		
+		try
+		{
+			stm = conn.prepareStatement(sqlDelete);
+			stm.setString(1, numeroDaAeronave);
+			stm.execute();
+		}
+		catch(Exception e)
+		{
+			e.printStackTrace();
+			try
+			{
+				conn.rollback();
+			}
+			catch (SQLException e1)
+			{
+				JOptionPane.showMessageDialog(null,e1.getStackTrace());
+			}
+			finally
+			{
+				if (stm != null)
+				{
+					try
+					{
+						stm.close();
+					}
+					catch (SQLException e1)
+					{
+						JOptionPane.showMessageDialog(null,e1.getStackTrace());
+					}
+				}
+			}
+		}
+	}
+	
+	public ArrayList<Aeronave> carregar(String numeroDaAeronave, Connection conn)
+	{
+		
+	}
+}

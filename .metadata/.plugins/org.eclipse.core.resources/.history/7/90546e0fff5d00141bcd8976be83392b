@@ -1,0 +1,195 @@
+package com.vpa.model;
+
+import java.awt.List;
+import java.util.*;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+import java.sql.ResultSet;
+import java.sql.Statement;
+import java.util.ArrayList;
+
+import javax.swing.JOptionPane;
+
+import com.vpa.controle.Aeronave;
+import com.vpa.model.ConexaoDAO;
+
+public class AeronaveDAO 
+{
+	
+	private Connection con;
+    private Statement stm;
+    private ResultSet rs;
+    private String driver = "com.mysql.jdbc.Driver";
+    public String url = "jdbc:mysql://192.168.1.108:3306/enfersystem";
+    public String user = "root";
+    public String password = "";
+    public String registro, nome, cargo, especialidade;
+
+    public static void Conectar() 
+    {
+        try 
+        {
+            Class.forName(driver);
+            con = DriverManager.getConnection(url, user, password);
+        } 
+        catch (ClassNotFoundException | SQLException ex) {
+            JOptionPane.showMessageDialog(null, "Falha na conexão !\n" + ex.getMessage(), "Erro", JOptionPane.ERROR_MESSAGE);
+        }
+    }
+    
+    public static void main (String [] args)
+    {
+            try 
+            {
+                Conectar();
+                stm = con.createStatement();
+                stm.executeUpdate("insert into enfer_funcionario values('" + funcional + "','" + registro + "','" + nome + "','" + cargo + "','" + especialidade + "')");
+                con.close();
+                stm.close();
+                JOptionPane.showMessageDialog(null, "Funcionario " + funcional + "\ncadastrado com sucesso !", "Cadastrado", JOptionPane.INFORMATION_MESSAGE);
+            } catch (SQLException e) 
+            {
+                JOptionPane.showMessageDialog(null, "Ocorreu um erro inesperado !\n" + e.getMessage(), "Erro", JOptionPane.ERROR_MESSAGE);
+            }
+  
+
+    }
+	
+	/*
+	Aeronave a = new Aeronave();
+	
+	ConexaoDAO cDAO = new ConexaoDAO();
+	
+	public void incluirAeronave(Connection conn)
+	{
+		String sqlInsert = "INSERT INTO aeronave(numeroDaAeronave, numeroDeAcentos) VALUES (?, ?, ?)";
+		PreparedStatement stm = null;
+
+		
+		try 
+		{
+			stm = conn.prepareStatement(sqlInsert);
+			stm.setString(1,a.getNumeroDaAeronave());
+			stm.setString(2,a.getNumeroDeAcentos());
+			stm.execute();
+		
+		}
+		catch(Exception e)
+		{
+			e.printStackTrace();
+			try
+			{
+				conn.rollback();
+			}
+			catch (SQLException e1)
+			{
+				JOptionPane.showMessageDialog(null,e1.getStackTrace());
+			}
+			finally
+			{
+				if (stm != null)
+				{
+					try
+					{
+						stm.close();
+					}
+					catch (SQLException e1)
+					{
+						JOptionPane.showMessageDialog(null,e1.getStackTrace());
+					}
+				}
+			}
+		}
+	}
+	
+	public void excluir(String numeroDaAeronave, Connection conn)
+	{
+		String sqlDelete = "DELETE FROM pedido WHERE id = ?";
+		PreparedStatement stm = null;
+		
+		try
+		{
+			stm = conn.prepareStatement(sqlDelete);
+			stm.setString(1, numeroDaAeronave);
+			stm.execute();
+		}
+		catch(Exception e)
+		{
+			e.printStackTrace();
+			try
+			{
+				conn.rollback();
+			}
+			catch (SQLException e1)
+			{
+				JOptionPane.showMessageDialog(null,e1.getStackTrace());
+			}
+			finally
+			{
+				if (stm != null)
+				{
+					try
+					{
+						stm.close();
+					}
+					catch (SQLException e1)
+					{
+						JOptionPane.showMessageDialog(null,e1.getStackTrace());
+					}
+				}
+			}
+		}
+	}
+	
+	public ArrayList<Aeronave> carregar(String numeroDaAeronave, Connection conn)
+	{
+		String sqlSelect = "SELECT * FROM pedido WHERE id_cliente = ?";
+		PreparedStatement stm = null;
+		ResultSet rs = null;
+		ArrayList<Aeronave> lp = new ArrayList<Aeronave>();
+		
+		try
+		{
+			stm = conn.prepareStatement(sqlSelect);
+			stm.setString(1, a.getNumeroDaAeronave());
+			rs = stm.executeQuery();
+			
+			while (rs.next())
+			{
+				Aeronave p = new Aeronave();
+				p.setNumeroDaAeronave(rs.getString(1));
+				p.setNumeroDeAcentos(rs.getString(2));
+				lp.add(p);
+			}
+		}
+		catch (Exception e)
+		{
+			e.printStackTrace();
+			try
+			{
+				conn.rollback();
+			}
+			catch (SQLException e1)
+			{
+				System.out.print(e1.getStackTrace());
+			}
+		}
+		finally
+		{
+			if (stm != null)
+			{
+				try
+				{
+					stm.close();
+				}
+				catch (SQLException e1)
+				{
+					System.out.print(e1.getStackTrace());
+				}
+			}
+		return (lp);
+		}
+	*/
+}

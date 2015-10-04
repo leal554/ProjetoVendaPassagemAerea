@@ -1,0 +1,130 @@
+package com.vpa.view;
+/*
+// Grupo: 
+//
+// 2MSIN
+//
+// Gabriel de Sousa Leal / RA: 201202909
+//
+// Andre Pacetti Dassa / RA: 201202384
+//
+// Eduardo Américo Rodrigues Lopes / RA: 201206168
+//
+*/
+
+import java.awt.*;
+import java.awt.event.*;
+import javax.swing.*;
+import java.util.Locale;
+import java.util.ResourceBundle;
+
+public class CadastrarVoo extends JFrame implements ActionListener
+{
+   JButton cadastrar, voltar;
+   JLabel cadastrarVoo, label1, numeroVoo, tripulacao,numAcentos,horarios,label6,saida,chegada,dia,destino,distancia,valor;
+   JTextField texto1,texto2,texto3,texto4,texto5,texto6,texto7,texto8,texto9;
+   private ResourceBundle bn = null;
+   	
+	public CadastrarVoo()
+	{
+		setTitle("Cadastrar Voo");
+		setBounds(300,50,350,350);
+		
+		getContentPane().setLayout(new GridLayout(0,2));
+      
+      bn = ResourceBundle.getBundle("messages", new Locale("pt", "BR"));
+		
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setVisible(true);
+		
+      cadastrarVoo = new JLabel(bn.getString("cadastrarVoo.cadastrarVoo"));
+      label1 = new JLabel("");
+      
+      numeroVoo = new JLabel(bn.getString("cadastrarVoo.numeroVoo"));
+      texto1 = new JTextField();
+      
+      tripulacao = new JLabel(bn.getString("cadastrarVoo.tripulacao"));
+      texto2 = new JTextField();
+      
+      numAcentos = new JLabel(bn.getString("cadastrarVoo.numAcentos"));
+      texto3 = new JTextField();
+      
+      horarios = new JLabel(bn.getString("cadastrarVoo.horarios"));
+      label6 = new JLabel("");
+      
+      saida = new JLabel(bn.getString("cadastrarVoo.saida"));
+      texto4 = new JTextField();
+      
+      chegada = new JLabel(bn.getString("cadastrarVoo.chegada"));
+      texto5 = new JTextField();
+      
+      dia = new JLabel(bn.getString("cadastrarVoo.dia"));
+      texto6 = new JTextField();
+      
+      destino = new JLabel(bn.getString("cadastrarVoo.destino"));
+      texto7 = new JTextField();
+      
+      distancia = new JLabel(bn.getString("cadastrarVoo.distancia"));
+      texto8 = new JTextField();
+      texto8.setEditable(false);
+      
+      valor = new JLabel(bn.getString("cadastrarVoo.valor"));
+      texto9 = new JTextField();
+      texto9.setEditable(false);
+      
+      cadastrar = new JButton(bn.getString("cadastrarVoo.botCadastrar"));
+      cadastrar.addActionListener(this);
+      
+      voltar = new JButton(bn.getString("cadastrarVoo.botVoltar"));
+      voltar.addActionListener(this);
+      
+
+		
+		getContentPane().add(cadastrarVoo);
+      getContentPane().add(label1);
+      getContentPane().add(numeroVoo);
+      getContentPane().add(texto1);
+      getContentPane().add(tripulacao);
+      getContentPane().add(texto2);
+      getContentPane().add(numAcentos);
+      getContentPane().add(texto3);
+      getContentPane().add(horarios);
+      getContentPane().add(label6);
+      getContentPane().add(saida);
+      getContentPane().add(texto4);
+      
+      getContentPane().add(chegada);
+      getContentPane().add(texto5);
+      getContentPane().add(dia); 
+      getContentPane().add(texto6); 
+      getContentPane().add(destino); 
+      getContentPane().add(texto7); 
+      getContentPane().add(distancia);
+      getContentPane().add(texto8);
+      getContentPane().add(valor);
+      getContentPane().add(texto9);
+      
+      getContentPane().add(cadastrar);
+      getContentPane().add(voltar);
+		
+		
+	}
+	
+	public void actionPerformed(ActionEvent e)
+	{
+   	if(e.getSource() == voltar)
+		{
+			Menu m = new Menu();
+			dispose();
+		}
+	}
+   /*
+   public static void main(String[] args)
+	{
+		JFrame p = new CadastrarVoo();
+		
+		p.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		p.setVisible(true);
+	}
+	*/
+}

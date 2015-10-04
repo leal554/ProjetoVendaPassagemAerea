@@ -1,0 +1,174 @@
+package com.vpa.model;
+
+import java.awt.List;
+import java.util.*;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+import java.sql.ResultSet;
+import java.util.ArrayList;
+
+import javax.swing.JOptionPane;
+
+import com.vpa.controle.Aeronave;
+import com.vpa.model.ConexaoDAO;
+
+public class AeronaveDAO 
+{
+	public ArrayList<Aeronave> list() throws SQLException 
+	{
+        Connection connection = null;
+        PreparedStatement statement = null;
+        ResultSet resultSet = null;
+        ArrayList<Aeronave> products = new ArrayList<Aeronave>();
+
+        try {
+            connection = database.getConnection();
+            statement = connection.prepareStatement("SELECT numeroDaAeronave, numeroDeAcentos");
+            resultSet = statement.executeQuery();
+
+            while (resultSet.next()) {
+            	Aeronave Aeronave = new Aeronave();
+            	Aeronave.setNumeroDaAeronave(resultSet.getString("numeroDaAeronave"));
+            	Aeronave.setNumeroDeAcentos(resultSet.getString("name"));
+                Aeronave.add(Aeronave);
+            }
+        } finally {
+            if (resultSet != null) try { resultSet.close(); } catch (SQLException ignore) {}
+            if (statement != null) try { statement.close(); } catch (SQLException ignore) {}
+            if (connection != null) try { connection.close(); } catch (SQLException ignore) {}
+        }
+
+        return products;
+    }
+	
+	public void incluirAeronave(Connection conn)
+	{
+		String sqlInsert = "INSERT INTO aeronave(numeroDaAeronave, numeroDeAcentos) VALUES (?, ?, ?)";
+		PreparedStatement stm = null;
+		
+		try 
+		{
+			stm = conn.prepareStatement(sqlInsert);
+			stm.setString(1,a.getNumeroDaAeronave());
+			stm.setString(2,a.getNumeroDeAcentos());
+			stm.execute();
+		
+		}
+		catch(Exception e)
+		{
+			e.printStackTrace();
+			try
+			{
+				conn.rollback();
+			}
+			catch (SQLException e1)
+			{
+				JOptionPane.showMessageDialog(null,e1.getStackTrace());
+			}
+			finally
+			{
+				if (stm != null)
+				{
+					try
+					{
+						stm.close();
+					}
+					catch (SQLException e1)
+					{
+						JOptionPane.showMessageDialog(null,e1.getStackTrace());
+					}
+				}
+			}
+		}
+	}
+	
+	public void excluir(String numeroDaAeronave, Connection conn)
+	{
+		String sqlDelete = "DELETE FROM pedido WHERE id = ?";
+		PreparedStatement stm = null;
+		
+		try
+		{
+			stm = conn.prepareStatement(sqlDelete);
+			stm.setString(1, numeroDaAeronave);
+			stm.execute();
+		}
+		catch(Exception e)
+		{
+			e.printStackTrace();
+			try
+			{
+				conn.rollback();
+			}
+			catch (SQLException e1)
+			{
+				JOptionPane.showMessageDialog(null,e1.getStackTrace());
+			}
+			finally
+			{
+				if (stm != null)
+				{
+					try
+					{
+						stm.close();
+					}
+					catch (SQLException e1)
+					{
+						JOptionPane.showMessageDialog(null,e1.getStackTrace());
+					}
+				}
+			}
+		}
+	}
+	
+	public ArrayList<Aeronave> carregar(String numeroDaAeronave, Connection conn)
+	{
+		String sqlSelect = "SELECT * FROM pedido WHERE id_cliente = ?";
+		PreparedStatement stm = null;
+		ResultSet rs = null;
+		ArrayList<Aeronave> lp = new ArrayList<Aeronave>();
+		
+		try
+		{
+			stm = conn.prepareStatement(sqlSelect);
+			stm.setString(1, a.getNumeroDaAeronave());
+			rs = stm.executeQuery();
+			
+			while (rs.next())
+			{
+				Aeronave p = new Aeronave();
+				p.setNumeroDaAeronave(rs.getString(1));
+				p.setNumeroDeAcentos(rs.getString(2));
+				lp.add(p);
+			}
+		}
+		catch (Exception e)
+		{
+			e.printStackTrace();
+			try
+			{
+				conn.rollback();
+			}
+			catch (SQLException e1)
+			{
+				System.out.print(e1.getStackTrace());
+			}
+		}
+		finally
+		{
+			if (stm != null)
+			{
+				try
+				{
+					stm.close();
+				}
+				catch (SQLException e1)
+				{
+					System.out.print(e1.getStackTrace());
+				}
+			}
+		return (lp);
+		}
+	}
+}

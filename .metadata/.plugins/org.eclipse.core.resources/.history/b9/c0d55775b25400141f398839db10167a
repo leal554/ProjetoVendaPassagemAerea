@@ -1,0 +1,81 @@
+package com.vpa.view;
+/*
+// Grupo: 
+//
+// 2MSIN
+//
+// Gabriel de Sousa Leal / RA: 201202909
+//
+// Andre Pacetti Dassa / RA: 201202384
+//
+// Eduardo Américo Rodrigues Lopes / RA: 201206168
+//
+*/
+
+import java.awt.*;
+import java.awt.event.*;
+import javax.swing.*;
+import java.util.Locale;
+import java.util.ResourceBundle;
+
+public class ConsultarCliente extends JFrame implements ActionListener
+{
+   JButton consultar, voltar;
+   JLabel nomeCliente, idCliente;
+   JTextField texto1,texto2;
+   private ResourceBundle bn = null;
+   
+	public ConsultarCliente()
+	{
+		setTitle("ConsultarCliente");
+		setBounds(300,50,300,200);
+		
+		getContentPane().setLayout(new GridLayout(0,2));
+		
+      bn = ResourceBundle.getBundle("messages", new Locale("pt", "BR"));
+		
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setVisible(true);
+      
+      nomeCliente = new JLabel(bn.getString("consultarCliente.nomeCliente"));
+      texto1 = new JTextField();
+      
+      idCliente = new JLabel(bn.getString("consultarCliente.idCliente"));
+      texto2 = new JTextField();
+      
+      consultar = new JButton(bn.getString("consultarCliente.consultar"));
+      consultar.addActionListener(this);
+      
+      voltar = new JButton(bn.getString("consultarCliente.Voltar"));
+      voltar.addActionListener(this);
+      
+
+		
+		getContentPane().add(nomeCliente);
+      getContentPane().add(texto1);
+      getContentPane().add(idCliente);
+      getContentPane().add(texto2);
+		getContentPane().add(consultar);
+      getContentPane().add(voltar);
+		
+		
+	}
+	
+	public void actionPerformed(ActionEvent e)
+	{
+   	if(e.getSource() == voltar)
+		{
+			MenuPassagem mp = new MenuPassagem();
+			dispose();
+		}
+	}
+   /*
+   public static void main(String[] args)
+	{
+		JFrame p = new ConsultarCliente();
+		
+		p.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		p.setVisible(true);
+	}
+	*/
+}

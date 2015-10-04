@@ -1,0 +1,5 @@
+package com.vpa.model;
+
+public class ConexaoDAO {
+
+}

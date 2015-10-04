@@ -1,0 +1,17 @@
+package com.vpa.view;
+import java.awt.*;
+import java.awt.event.*;
+
+import javax.swing.*;
+import java.util.Locale;
+import java.util.ResourceBundle;
+public class Radio extends JFrame implements ActionListener
+{
+
+	
+	
+	public void actionPerformed(ActionEvent e)
+	{
+		
+	}
+}

@@ -1,0 +1,17 @@
+login.usuario1 = ADMIN
+login.senha1 = admin
+login.tipo1 = adm
+
+login.usuario2 = GABRIEL
+login.senha2 = 123
+login.tipo2 = adm
+
+login.usuario3 = ANDRE
+login.senha3 = 123
+login.tipo3 = user
+
+login.usuario4 = EDUARDO
+login.senha4 = 123
+login.tipo4 = user
+
+

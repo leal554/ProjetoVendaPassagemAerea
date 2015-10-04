@@ -1,0 +1,47 @@
+package com.vpa.view;
+
+/*
+// Grupo: 
+//
+// 2MSIN
+//
+// Gabriel de Sousa Leal / RA: 201202909
+//
+// Andre Pacetti Dassa / RA: 201202384
+//
+// Eduardo Américo Rodrigues Lopes / RA: 201206168
+//
+*/
+
+import java.awt.*;
+import java.awt.event.*;
+import javax.swing.*;
+
+
+
+public class Poltronas extends JFrame
+{
+	JPanel b;
+	public Poltronas()
+	{
+		setTitle("Login");
+		setBounds(0, 0, 1000, 450);
+		
+		getContentPane().setLayout(new GridLayout(0, 2));
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setVisible(true);
+		
+		FundoBg img = new FundoBg();
+		
+		b = img;
+		
+		getContentPane().add(b);
+		
+	}
+		
+		public static void main (String []args)
+		{
+			Poltronas p = new Poltronas();
+		}
+		
+}

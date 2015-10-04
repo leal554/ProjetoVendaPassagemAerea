@@ -1,0 +1,6 @@
+package com.vpa.view;
+
+public class Locale extends ResourceBundle
+{
+	
+}

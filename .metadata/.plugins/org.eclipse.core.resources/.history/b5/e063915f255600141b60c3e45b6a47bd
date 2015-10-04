@@ -1,0 +1,49 @@
+package com.vpa.view;
+import java.awt.*;
+import java.awt.event.*;
+import java.awt.geom.Rectangle2D;
+import java.awt.image.BufferedImage;
+import java.io.*;
+
+import javax.imageio.ImageIO;
+import javax.swing.*;
+
+import java.util.Locale;
+import java.util.ResourceBundle;
+
+import javax.swing.JPanel;
+
+public class Imagem extends JPanel
+{
+	BufferedImage b;  
+    Rectangle2D rect;  
+      
+    public Imagem(){   
+        try 
+        {  
+        	b = ImageIO.read(new File("C:UsersGabrielDesktop"));  
+            rect  = new Rectangle(0,0,130,130);                                   
+              
+        } catch (IOException ex) {  
+            ex.printStackTrace(System.err);  
+        }  
+    }  
+      
+    @Override   
+    public void paintComponent(Graphics g){    
+        /* 
+         * Se você quiser que a imagem seja uma só (extendida ao tamanho da tela, não replicada 
+         * tire os comentários da proxima linha 
+         */  
+          
+      // rect = new Rectangle(0,0,this.getWidth(),this.getHeight());  
+          
+          
+        TexturePaint p = new TexturePaint(b,rect);  
+        Graphics2D g2 = (Graphics2D) g;  
+        g2.setPaint(p);  
+        g2.fillRect(0,0,this.getWidth(),this.getHeight());  
+
+    } 
+
+}

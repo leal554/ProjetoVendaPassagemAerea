@@ -1,0 +1,91 @@
+menu.btcadastrarVoo = Cadastrar Voo
+menu.btcadastrarAeronave = Cadastrar Aeronave
+menu.btmenuPassagem = Menu Passagem
+
+menuPassagem.comprarPassagem = Comprar Passagem
+menuPassagem.novoCliente = Novo Cliente
+menuPassagem.consultarCliente = Consultar Cliente
+menuPassagem.transferirPassagem = Transferir Passagem
+menuPassagem.checkin = Check-In
+menuPassagem.voltar = Voltar
+
+transferenciaPassagem.digiteDados = Digite os Dados
+transferenciaPassagem.idCliente = Id Cliente:
+transferenciaPassagem.digiteBeneficiario = Digite o Beneficiario:
+transferenciaPassagem.botConsultar = Transferir
+transferenciaPassagem.botVoltar = Voltar
+
+cadastrarCliente.cadastrarCliente = Cadastrar Cliente
+cadastrarCliente.nome = Nome
+cadastrarCliente.rg = Rg
+cadastrarCliente.cpf = Cpf
+cadastrarCliente.endereco = Endereço
+cadastrarCliente.cep = CEP
+cadastrarCliente.estadoCivil = Estado Civil
+cadastrarCliente.emprego = Emprego
+cadastrarCliente.email = Email
+cadastrarCliente.confirmaEmail = Confirmar Email
+cadastrarCliente.senha = Senha
+cadastrarCliente.confirmaSenha = Confirmar Senha
+cadastrarCliente.botCadastrar = Cadastrar
+cadastrarCliente.botVoltar = Voltar
+cadastrarCliente.radioSr = Sr
+cadastrarCliente.radioSra = Sra
+cadastrarCliente.radioSrta = Srta
+
+cadastrarVoo.cadastrarVoo = Cadastrar Voo
+cadastrarVoo.numeroVoo = Numero Voo:
+cadastrarVoo.tripulacao = Tripulação:
+cadastrarVoo.numAcentos = Numero de Acentos:
+cadastrarVoo.horarios = Horarios:
+cadastrarVoo.saida = Saida:
+cadastrarVoo.chegada = Chegada:
+cadastrarVoo.dia = Dia:
+cadastrarVoo.destino = Destino:
+cadastrarVoo.distancia = Distancia:
+cadastrarVoo.valor = Valor:
+cadastrarVoo.botVoltar = Voltar
+cadastrarVoo.botCadastrar = Cadastrar
+
+cadastrarAeronave.cadastrarAeronave = Cadastrar Aeronave
+cadastrarAeronave.numeroAeronave = Numero da Aeronave
+cadastrarAeronave.numeroAcentos = Numero de Acentos
+cadastrarAeronave.botCadastrar = Cadastrar
+cadastrarAeronave.botVoltar = Voltar
+
+checkIn.checkIn = Check-In
+checkIn.escolherAcento = Escolher Acento:
+checkIn.despacharBagagem = Despachar Bagagem:
+checkIn.checkIn.radioSim = Sim
+checkIn.checkIn.radioNao = Não
+checkIn.checkIn.botEmitir = Emitir
+checkIn.checkIn.botVoltar = Voltar
+
+comprarPassagem.comprarPassagem = Comprar Passagem
+comprarPassagem.pesoBagagem = Peso Bagagem: 
+comprarPassagem.numBagagem = Numero Bagagem:
+comprarPassagem.necessidadeEspecial = Necessidade Especial
+comprarPassagem.crianca = Criança
+comprarPassagem.idaVolta = Ida e Volta
+comprarPassagem.formaPagamento = Formar de Pagamento
+comprarPassagem.numeroCartao = Numero do Cartao
+comprarPassagem.codSeguranca = Codigo de Segurança
+comprarPassagem.comprar = Comprar
+comprarPassagem.voltar = Voltar
+comprarPassagem.radioSim = Sim
+comprarPassagem.radioNao = Não
+comprarPassagem.radioCredito = Credito
+comprarPassagem.radioDebito = Debito
+comprarPassagem.radioDinheiro = Dinheiro
+comprarPassagem.radioBoleto = Boleto
+
+consultarCliente.nomeCliente = Nome:
+consultarCliente.idCliente = id Cliente:
+consultarCliente.consultar = Consultar
+consultarCliente.Voltar = Voltar
+
+login.login = Login
+login.usuario = User:
+login.senha = Password:
+login.bLogin = Login
+login.voltar = Back

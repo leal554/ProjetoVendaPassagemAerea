@@ -1,0 +1,37 @@
+package com.vpa.view;
+
+/*
+//Grupo: 
+//
+//2MSIN
+//
+//Gabriel de Sousa Leal / RA: 201202909
+//
+//Andre Pacetti Dassa / RA: 201202384
+//
+//Eduardo Américo Rodrigues Lopes / RA: 201206168
+//
+*/
+
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.JFrame;
+
+public class ResultadoConsultarCliente extends JFrame implements ActionListener
+{
+	JList Clientes;
+	
+	public ResultadoConsultarCliente()
+	{
+		
+	}
+
+	@Override
+	public void actionPerformed(ActionEvent arg0) {
+		// TODO Auto-generated method stub
+		
+	}
+	
+	
+}

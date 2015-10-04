@@ -1,0 +1,15 @@
+package com.vpa.view;
+
+private class NewContentPane extends JPanel{
+
+	//método implementado de JPanel
+
+	protected void paintComponent(final Graphics g) {
+
+	               super.paintComponent(g);
+
+	               g.drawImage(bImage, 0, 0, this);
+
+	        }
+
+	}

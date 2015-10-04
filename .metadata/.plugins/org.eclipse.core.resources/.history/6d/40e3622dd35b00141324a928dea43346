@@ -1,0 +1,24 @@
+package com.vpa.view;
+import java.awt.*;
+import java.awt.event.*;
+
+import javax.swing.*;
+
+import java.util.Locale;
+import java.util.ResourceBundle;
+public class Radio extends JFrame implements ActionListener
+{
+
+	JRadioButton acento = new JRadioButton(bn.getString("comprarPassagem.radioSim"));
+	acento.setMnemonic(KeyEvent.VK_B);
+    acento.setActionCommand(bn.getString("comprarPassagem.radioSim"));
+    acento.setSelected(false);
+    acento.addActionListener(this);
+    
+    getContentPane().add(acento);
+	
+	public void actionPerformed(ActionEvent e)
+	{
+		
+	}
+}

@@ -1,0 +1,176 @@
+package com.vpa.controle;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.Date;
+import java.util.ArrayList;
+
+import com.vpa.model.ClienteDAO;
+import com.vpa.model.PassagemDAO;
+
+public class Passagem 
+{
+	private double pesoBagagem;
+	private int numeroBagagem;
+	private String necessidadeEspecial;
+	private String criança;
+	private String idaEvolta;
+	private String formaPagamento;
+	private int numeroCartao;
+	private int codSeguranca;
+	private String dataIda;
+	private String dataVolta;
+	private Double valor;
+	
+	public Passagem(){}
+	
+	public Passagem(double pesoBagagem, int numeroBagagem, String necessidadeEspecial, String criança,
+			  		String idaEvolta, String formaPagamento, int numeroCartao, int codSeguranca, 
+			  		String dataIda,String dataVolta)
+	{
+		this.pesoBagagem = pesoBagagem;
+		this.numeroBagagem = numeroBagagem;
+		this.necessidadeEspecial = necessidadeEspecial;
+		this.criança = criança;
+		this.idaEvolta = idaEvolta;
+		this.formaPagamento = formaPagamento;
+		this.numeroCartao = numeroCartao;
+		this.codSeguranca = codSeguranca;
+		this.dataIda = dataIda;
+		this.dataVolta = dataVolta;
+		this.valor = null;
+		
+		PassagemDAO pdao = new PassagemDAO();
+		pdao.InserirPassagem(this.pesoBagagem, this.numeroBagagem, this.necessidadeEspecial, this.criança,
+							 this.idaEvolta, this.formaPagamento, this.numeroCartao,this.codSeguranca, 
+							 this.dataIda ,this.dataVolta,this.valor);
+	}
+
+	public void loginTransferenciaPassagem(int idCliente, String Senha)
+	{
+		boolean login = false;
+		ClienteDAO c = new ClienteDAO();
+		login = c.consultarCliente(idCliente, Senha);
+		
+		if(login)
+		{
+			
+		}
+	}
+	
+	public double getPesoBagagem() 
+	{
+		return pesoBagagem;
+	}
+
+	public void setPesoBagagem(double pesoBagagem) 
+	{
+		this.pesoBagagem = pesoBagagem;
+	}
+
+	public int getNumeroBagagem() 
+	{
+		return numeroBagagem;
+	}
+
+	public void setNumeroBagagem(int numeroBagagem) 
+	{
+		this.numeroBagagem = numeroBagagem;
+	}
+
+	public String getNecessidadeEspecial() 
+	{
+		return necessidadeEspecial;
+	}
+
+	public void setNecessidadeEspecial(String necessidadeEspecial) 
+	{
+		this.necessidadeEspecial = necessidadeEspecial;
+	}
+
+	public String getCriança() 
+	{
+		return criança;
+	}
+
+	public void setCriança(String criança) 
+	{
+		this.criança = criança;
+	}
+
+	public String getIdaEvolta() 
+	{
+		return idaEvolta;
+	}
+
+	public void setIdaEvolta(String idaEvolta) 
+	{
+		this.idaEvolta = idaEvolta;
+	}
+
+	public String getFormaPagamento() 
+	{
+		return formaPagamento;
+	}
+
+	public void setFormaPagamento(String formaPagamento) 
+	{
+		this.formaPagamento = formaPagamento;
+	}
+
+	public int getNumeroCartao() 
+	{
+		return numeroCartao;
+	}
+
+	public void setNumeroCartao(int numeroCartao) 
+	{
+		this.numeroCartao = numeroCartao;
+	}
+
+	public int getCodSeguranca() 
+	{
+		return codSeguranca;
+	}
+
+	public void setCodSeguranca(int codSeguranca) 
+	{
+		this.codSeguranca = codSeguranca;
+	}
+
+	public String getDataIda() 
+	{
+		return dataIda;
+	}
+
+	public void setDataIda(String dataIda) 
+	{
+		this.dataIda = dataIda;
+	}
+
+	public String getDataVolta() 
+	{
+		return dataVolta;
+	}
+
+	public void setDataVolta(String dataVolta) 
+	{
+		this.dataVolta = dataVolta;
+	}
+
+	public Double getValor() 
+	{
+		return valor;
+	}
+
+	public void setValor(Double valor) 
+	{
+		this.valor = valor;
+	}
+
+	
+	
+	
+}

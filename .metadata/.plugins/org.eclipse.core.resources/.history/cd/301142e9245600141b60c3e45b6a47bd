@@ -1,0 +1,37 @@
+package com.vpa.view;
+import java.awt.*;
+import java.awt.event.*;
+import javax.swing.*;
+import java.util.Locale;
+import java.util.ResourceBundle;
+import javax.swing.JPanel;
+
+public class Imagem extends JPanel
+{
+	 private Image image;
+	 
+	public Imagem(URL url)
+	{
+		setImage(url);
+		 
+        setOpaque(false);
+ 
+        setPreferredSize(new Dimension(getWidth(), getHeight()));
+	}
+	
+	public void setImage(URL url) {
+        image = new ImageIcon(url).getImage();
+    }
+	
+	public void paintComponent(Graphics g) 
+	{
+		 g.drawImage(image, 0, 0, this);	
+		 super.paintComponent(g);
+	}
+	public int getWidth() {
+        return image.getWidth(this);
+    }
+	public int getHeight() {
+        return image.getHeight(this);
+    }
+}

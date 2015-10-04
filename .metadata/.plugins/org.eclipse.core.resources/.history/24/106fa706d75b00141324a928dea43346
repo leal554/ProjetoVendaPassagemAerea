@@ -1,0 +1,333 @@
+package com.vpa.view;
+
+/*
+//Grupo: 
+//
+//2MSIN
+//
+//Gabriel de Sousa Leal / RA: 201202909
+//
+//Andre Pacetti Dassa / RA: 201202384
+//
+//Eduardo Américo Rodrigues Lopes / RA: 201206168
+//
+*/
+
+import java.awt.*;
+import java.awt.event.*;
+
+import javax.swing.*;
+
+import java.util.Locale;
+import java.util.ResourceBundle;
+
+public class Acentos extends JFrame implements ActionListener
+{
+	private JButton voltar, comprar;
+	private JLabel fileira, poltrona;
+	private ResourceBundle bn;
+		
+	public Acentos()
+	{
+		bn = ResourceBundle.getBundle("messages", Locale.getDefault());
+		
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setVisible(true);
+		
+		setTitle("Escolher Acento");
+		setBounds(200, 150, 750,400);
+		
+		JPanel tela = new JPanel();
+		tela.setLayout(new BorderLayout());
+		
+		JPanel poltronas = new JPanel();
+		poltronas.setLayout(new GridLayout(2,0));
+		
+		poltrona = new JLabel("Escolha acento: ");
+		poltronas.add(poltrona);
+		
+		JRadioButton a01 = new JRadioButton("01");
+		a01.setMnemonic(KeyEvent.VK_B);
+		a01.setActionCommand("01");
+		a01.setSelected(true);
+		a01.addActionListener(this);
+		poltronas.add(a01);
+		
+		JRadioButton a02 = new JRadioButton("02");
+		a02.setMnemonic(KeyEvent.VK_B);
+		a02.setActionCommand("01");
+		a02.setSelected(true);
+		a02.addActionListener(this);
+		poltronas.add(a02);
+		
+		JRadioButton a03 = new JRadioButton("03");
+		a03.setMnemonic(KeyEvent.VK_B);
+		a03.setActionCommand("01");
+		a03.setSelected(true);
+		a03.addActionListener(this);
+		poltronas.add(a03);
+		
+		JRadioButton a04 = new JRadioButton("04");
+		a04.setMnemonic(KeyEvent.VK_B);
+		a04.setActionCommand("01");
+		a04.setSelected(true);
+		a04.addActionListener(this);
+		poltronas.add(a04);
+		
+		JRadioButton a05 = new JRadioButton("05");
+		a05.setMnemonic(KeyEvent.VK_B);
+		a05.setActionCommand("01");
+		a05.setSelected(true);
+		a05.addActionListener(this);
+		poltronas.add(a05);
+		
+		JRadioButton a06 = new JRadioButton("06");
+		a06.setMnemonic(KeyEvent.VK_B);
+		a06.setActionCommand("01");
+		a06.setSelected(true);
+		a06.addActionListener(this);
+		poltronas.add(a06);
+		
+		JRadioButton a07 = new JRadioButton("07");
+		a07.setMnemonic(KeyEvent.VK_B);
+		a07.setActionCommand("01");
+		a07.setSelected(true);
+		a07.addActionListener(this);
+		poltronas.add(a07);
+		
+		JRadioButton a08 = new JRadioButton("08");
+		a08.setMnemonic(KeyEvent.VK_B);
+		a08.setActionCommand("01");
+		a08.setSelected(true);
+		a08.addActionListener(this);
+		poltronas.add(a08);
+		
+		JRadioButton a09 = new JRadioButton("09");
+		a09.setMnemonic(KeyEvent.VK_B);
+		a09.setActionCommand("01");
+		a09.setSelected(true);
+		a09.addActionListener(this);
+		poltronas.add(a09);
+		
+		JRadioButton a10 = new JRadioButton("10");
+		a10.setMnemonic(KeyEvent.VK_B);
+		a10.setActionCommand("01");
+		a10.setSelected(true);
+		a10.addActionListener(this);
+		poltronas.add(a10);
+		
+		JRadioButton a11 = new JRadioButton("11");
+		a11.setMnemonic(KeyEvent.VK_B);
+		a11.setActionCommand("01");
+		a11.setSelected(true);
+		a11.addActionListener(this);
+		poltronas.add(a11);
+		
+		JRadioButton a12 = new JRadioButton("12");
+		a12.setMnemonic(KeyEvent.VK_B);
+		a12.setActionCommand("01");
+		a12.setSelected(true);
+		a12.addActionListener(this);
+		poltronas.add(a12);
+		
+		JRadioButton a13 = new JRadioButton("13");
+		a13.setMnemonic(KeyEvent.VK_B);
+		a13.setActionCommand("01");
+		a13.setSelected(true);
+		a13.addActionListener(this);
+		poltronas.add(a13);
+		
+		JRadioButton a14 = new JRadioButton("14");
+		a14.setMnemonic(KeyEvent.VK_B);
+		a14.setActionCommand("01");
+		a14.setSelected(true);
+		a14.addActionListener(this);
+		poltronas.add(a14);
+		
+		JRadioButton a15 = new JRadioButton("15");
+		a15.setMnemonic(KeyEvent.VK_B);
+		a15.setActionCommand("01");
+		a15.setSelected(true);
+		a15.addActionListener(this);
+		poltronas.add(a15);
+		
+		JRadioButton a16 = new JRadioButton("16");
+		a16.setMnemonic(KeyEvent.VK_B);
+		a16.setActionCommand("01");
+		a16.setSelected(true);
+		a16.addActionListener(this);
+		poltronas.add(a16);
+		
+		JRadioButton a17 = new JRadioButton("17");
+		a17.setMnemonic(KeyEvent.VK_B);
+		a17.setActionCommand("01");
+		a17.setSelected(true);
+		a17.addActionListener(this);
+		poltronas.add(a17);
+		
+		JRadioButton a18 = new JRadioButton("18");
+		a18.setMnemonic(KeyEvent.VK_B);
+		a18.setActionCommand("01");
+		a18.setSelected(true);
+		a18.addActionListener(this);
+		poltronas.add(a18);
+		
+		JRadioButton a19 = new JRadioButton("19");
+		a19.setMnemonic(KeyEvent.VK_B);
+		a19.setActionCommand("01");
+		a19.setSelected(true);
+		a19.addActionListener(this);
+		poltronas.add(a19);
+		
+		JRadioButton a20 = new JRadioButton("20");
+		a20.setMnemonic(KeyEvent.VK_B);
+		a20.setActionCommand("01");
+		a20.setSelected(true);
+		a20.addActionListener(this);
+		poltronas.add(a20);
+		
+		JRadioButton a21 = new JRadioButton("21");
+		a21.setMnemonic(KeyEvent.VK_B);
+		a21.setActionCommand("01");
+		a21.setSelected(true);
+		a21.addActionListener(this);
+		poltronas.add(a21);
+		
+		JRadioButton a22 = new JRadioButton("22");
+		a22.setMnemonic(KeyEvent.VK_B);
+		a22.setActionCommand("01");
+		a22.setSelected(true);
+		a22.addActionListener(this);
+		poltronas.add(a22);
+		
+		JRadioButton a23 = new JRadioButton("23");
+		a23.setMnemonic(KeyEvent.VK_B);
+		a23.setActionCommand("01");
+		a23.setSelected(true);
+		a23.addActionListener(this);
+		poltronas.add(a23);
+		
+		JRadioButton a24 = new JRadioButton("24");
+		a24.setMnemonic(KeyEvent.VK_B);
+		a24.setActionCommand("01");
+		a24.setSelected(true);
+		a24.addActionListener(this);
+		poltronas.add(a24);
+		
+		JRadioButton a25 = new JRadioButton("25");
+		a25.setMnemonic(KeyEvent.VK_B);
+		a25.setActionCommand("01");
+		a25.setSelected(true);
+		a25.addActionListener(this);
+		poltronas.add(a25);
+		
+		JRadioButton a26 = new JRadioButton("26");
+		a26.setMnemonic(KeyEvent.VK_B);
+		a26.setActionCommand("01");
+		a26.setSelected(true);
+		a26.addActionListener(this);
+		poltronas.add(a01);
+		
+		JRadioButton a27 = new JRadioButton("27");
+		a27.setMnemonic(KeyEvent.VK_B);
+		a27.setActionCommand("01");
+		a27.setSelected(true);
+		a27.addActionListener(this);
+		poltronas.add(a27);
+		
+		JRadioButton a28 = new JRadioButton("28");
+		a28.setMnemonic(KeyEvent.VK_B);
+		a28.setActionCommand("01");
+		a28.setSelected(true);
+		a28.addActionListener(this);
+		poltronas.add(a28);
+		
+		JRadioButton a29 = new JRadioButton("29");
+		a29.setMnemonic(KeyEvent.VK_B);
+		a29.setActionCommand("01");
+		a29.setSelected(true);
+		a29.addActionListener(this);
+		poltronas.add(a29);
+		
+		JPanel fileiras = new JPanel();
+		fileiras.setLayout(new GridLayout(1,0));
+		
+		fileira = new JLabel("Escolha Fileira: ");
+		fileiras.add(fileira);
+		
+		JRadioButton a = new JRadioButton("A");
+		a.setMnemonic(KeyEvent.VK_B);
+		a.setActionCommand("A");
+		a.setSelected(true);
+		a.addActionListener(this);
+		fileiras.add(a);
+		
+		JRadioButton b = new JRadioButton("B");
+		b.setMnemonic(KeyEvent.VK_B);
+		b.setActionCommand("B");
+		b.setSelected(true);
+		b.addActionListener(this);
+		fileiras.add(b);
+		
+		JRadioButton c = new JRadioButton("C");
+		c.setMnemonic(KeyEvent.VK_B);
+		c.setActionCommand("C");
+		c.setSelected(true);
+		c.addActionListener(this);
+		fileiras.add(c);
+		
+		JRadioButton d = new JRadioButton("D");
+		d.setMnemonic(KeyEvent.VK_B);
+		d.setActionCommand("D");
+		d.setSelected(true);
+		d.addActionListener(this);
+		fileiras.add(d);
+		
+		JRadioButton e = new JRadioButton("E");
+		e.setMnemonic(KeyEvent.VK_B);
+		e.setActionCommand("E");
+		e.setSelected(true);
+		e.addActionListener(this);
+		fileiras.add(e);
+		
+		JRadioButton f = new JRadioButton("F");
+		f.setMnemonic(KeyEvent.VK_B);
+		f.setActionCommand("F");
+		f.setSelected(true);
+		f.addActionListener(this);
+		fileiras.add(f);
+		
+		JPanel sul = new JPanel();
+		sul.setLayout(new GridLayout(4,0));
+		sul.add(poltronas);
+		sul.add(fileiras);
+		
+		JPanel img = new JPanel();
+		img.setLayout(new GridLayout(1,0));
+		img.setOpaque(true);
+		img.add(new Fundo());
+		
+		tela.add(sul, BorderLayout.SOUTH);
+		tela.add(img, BorderLayout.CENTER);
+		getContentPane().add(tela);
+		
+	}
+	
+	public void actionPerformed(ActionEvent e) 
+	{
+		if(e.getSource() == comprar)
+		{
+			//if() fazer para quando a classe DAO der OK na tranferencia voltar para o menu passagem
+			JOptionPane.showMessageDialog(null, bn.getString("acento.JOptionPane"));
+			MenuPassagem mp = new MenuPassagem();
+			dispose();
+			
+		}
+		
+		if(e.getSource() == voltar)
+		{
+			ComprarPassagem cp = new ComprarPassagem();
+			dispose();
+		}	
+	}
+}

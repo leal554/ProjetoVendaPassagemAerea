@@ -1,0 +1,134 @@
+package com.vpa.view;
+
+/*
+ // Grupo: 
+ //
+ // 2MSIN
+ //
+ // Gabriel de Sousa Leal / RA: 201202909
+ //
+ // Andre Pacetti Dassa / RA: 201202384
+ //
+ // Eduardo Américo Rodrigues Lopes / RA: 201206168
+ //
+ */
+
+/*
+ // Usuario: admin
+ // Senha: 123456admin
+ */
+
+import java.awt.*;
+import java.awt.event.*;
+import javax.swing.*;
+import java.util.Locale;
+import java.util.ResourceBundle;
+
+public class Login extends JFrame implements ActionListener {
+
+	private JLabel login, label1, usuario, senha;
+	private JTextField txUsuario;
+	private JPasswordField txSenha; // TextFiled Para senhas |*****|
+	private JButton bLogin, voltar;
+	private ResourceBundle bn;
+	private ResourceBundle us = null;
+	private String ApUsuario;
+	private String ApSenha;
+	int ling = 0;
+
+	public Login() 
+	{
+		switch (ling) {
+			case 1:
+				bn = ResourceBundle.getBundle("messages", new Locale("en", "US"));
+				break;
+			case 2:
+				bn = ResourceBundle.getBundle("messages", new Locale("pt", "BR"));
+				break;
+			default:
+				JOptionPane.showMessageDialog(null, "erro");
+		}
+		setTitle("Login");
+		setBounds(300, 50, 300, 200);
+
+		getContentPane().setLayout(new GridLayout(0, 2));
+
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setVisible(true);
+
+		login = new JLabel(bn.getString("login.login"));
+		label1 = new JLabel("");
+
+		usuario = new JLabel(bn.getString("login.usuario"));
+		txUsuario = new JTextField();
+
+		senha = new JLabel(bn.getString("login.senha"));
+		txSenha = new JPasswordField();// TextFiled Para senhas
+
+		voltar = new JButton(bn.getString("login.voltar"));
+		voltar.addActionListener(this);
+
+		bLogin = new JButton(bn.getString("login.bLogin"));
+		bLogin.addActionListener(this);
+
+		getContentPane().add(login);
+		getContentPane().add(label1);
+		getContentPane().add(usuario);
+		getContentPane().add(txUsuario);
+		getContentPane().add(senha);
+		getContentPane().add(txSenha);
+
+		getContentPane().add(voltar);
+		getContentPane().add(bLogin);
+
+	}
+
+	public void actionPerformed(ActionEvent e) {
+		us = ResourceBundle.getBundle("usuarios");
+
+		ApUsuario = txUsuario.getText().toUpperCase();
+		ApSenha = txSenha.getText();
+
+		String loginUsuario = "login.usuario1";
+		String loginSenha = "login.senha1";
+		int contador = 1;
+
+		if (e.getSource() == bLogin) {
+			while (true) {
+				try {
+					if (ApUsuario.equals(us.getString(loginUsuario))
+							&& ApSenha.equals(us.getString(loginSenha))) {
+						// JOptionPane.showMessageDialog(null,"Login efetuado com sucesso!!!");
+						Menu m = new Menu();
+						dispose();
+						return;
+					} else {
+						loginUsuario = "";
+						loginSenha = "";
+
+						contador++;
+						loginUsuario = "login.usuario" + contador;
+						loginSenha = "login.senha" + contador;
+					}
+				} catch (Exception ex) {
+					JOptionPane.showMessageDialog(null,
+							"Erro: Login ou Senha Errado!", "Erro",
+							JOptionPane.WARNING_MESSAGE);
+					contador = 1;
+					return;
+				}
+			}
+		}
+
+		if (e.getSource() == voltar) {
+			Linguagem l = new Linguagem();
+			dispose();
+		}
+	}
+
+	/*
+	 * public static void main(String[] args) { JFrame p = new Login();
+	 * 
+	 * p.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); p.setVisible(true); }
+	 */
+}

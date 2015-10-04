@@ -1,0 +1,28 @@
+package com.vpa.view;
+
+import javax.swing.*;
+
+public class LinguagemSelecao {
+	private String linguagem;
+	private String pais;
+
+	public LinguagemSelecao() {
+	}
+
+	public String getLinguagem() {
+		return linguagem;
+	}
+
+	public void setLinguagem(String linguagem) {
+		this.linguagem = linguagem;
+	}
+
+	public String getPais() {
+		return pais;
+	}
+
+	public void setPais(String pais) {
+		this.pais = pais;
+	}
+
+}

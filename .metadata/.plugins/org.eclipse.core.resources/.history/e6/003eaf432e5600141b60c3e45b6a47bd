@@ -1,0 +1,91 @@
+menu.btcadastrarVoo = Register Flight
+menu.btcadastrarAeronave = Register Plane
+menu.btMenuPassagem = Buy Passage
+
+menuPassagem.escolherAcento = Buy Ticket
+menuPassagem.novoCliente = New Client
+menuPassagem.consultarCliente = Consult Client
+menuPassagem.transferirPassagem = Transfer Passage
+menuPassagem.checkin = Check-In
+menuPassagem.voltar = Back
+
+transferenciaPassagem.digiteDados = Key the Data
+transferenciaPassagem.idCliente = Id owner:
+transferenciaPassagem.digiteBeneficiario = Key who you want to transfer:
+transferenciaPassagem.botConsultar = Transfer
+transferenciaPassagem.botVoltar = Back
+
+cadastrarCliente.cadastrarCliente = Register Client
+cadastrarCliente.nome = Name
+cadastrarCliente.rg = Rg
+cadastrarCliente.cpf = Cpf
+cadastrarCliente.endereco = Address
+cadastrarCliente.cep = ZipCode
+cadastrarCliente.estadoCivil = Civil State
+cadastrarCliente.emprego = Job
+cadastrarCliente.email = Email
+cadastrarCliente.confirmaEmail = Re-enter Email 
+cadastrarCliente.senha = Key
+cadastrarCliente.confirmaSenha = Re-enter Key
+cadastrarCliente.botCadastrar = Register 
+cadastrarCliente.botVoltar = Back
+cadastrarCliente.radioSr = Mr.
+cadastrarCliente.radioSra = Mrs.
+cadastrarCliente.radioSrta = Ms.
+
+cadastrarVoo.cadastrarVoo = Register Flight
+cadastrarVoo.numeroVoo = Flight number:
+cadastrarVoo.tripulacao = Crew:
+cadastrarVoo.numAcentos = Number of seats:
+cadastrarVoo.horarios = Hour:
+cadastrarVoo.saida = Departure:
+cadastrarVoo.chegada = Arrive:
+cadastrarVoo.dia = Day:
+cadastrarVoo.destino = Destiny:
+cadastrarVoo.distancia = Distance:
+cadastrarVoo.valor = Price:
+cadastrarVoo.botVoltar = Back
+cadastrarVoo.botCadastrar = Register
+
+cadastrarAeronave.cadastrarAeronave = Register Plane
+cadastrarAeronave.numeroAeronave = Plane Number:
+cadastrarAeronave.numeroAcentos = Number of seats:
+cadastrarAeronave.botCadastrar = Register
+cadastrarAeronave.botVoltar = Back
+
+checkIn.checkIn = Check-In
+checkIn.escolherAcento = Choose your Seat:
+checkIn.despacharBagagem = Send Baggage:
+checkIn.checkIn.radioSim = Yes
+checkIn.checkIn.radioNao = No
+checkIn.checkIn.botEmitir = Issue ticket
+checkIn.checkIn.botVoltar = Back
+
+comprarPassagem.comprarPassagem = Buy Ticket
+comprarPassagem.pesoBagagem = Peso Bagagem: 
+comprarPassagem.numBagagem = Number Baggage:
+comprarPassagem.necessidadeEspecial = Special Necessity
+comprarPassagem.crianca = Child
+comprarPassagem.idaVolta = Round-trip ticket
+comprarPassagem.formaPagamento = Method of payment
+comprarPassagem.numeroCartao = Card Number
+comprarPassagem.codSeguranca = Security code
+comprarPassagem.comprar = buy
+comprarPassagem.voltar = Back
+comprarPassagem.radioSim = Yes
+comprarPassagem.radioNao = No
+comprarPassagem.radioCredito = Credit
+comprarPassagem.radioDebito = Debit
+comprarPassagem.radioDinheiro = Money
+comprarPassagem.radioBoleto = Bank Slip
+
+consultarCliente.nomeCliente = Name: 
+consultarCliente.idCliente = id Client:
+consultarCliente.consultar = Consult
+consultarCliente.Voltar = Back
+
+login.login = Login
+login.usuario = User:
+login.senha = Password:
+login.bLogin = Login
+login.voltar = Back

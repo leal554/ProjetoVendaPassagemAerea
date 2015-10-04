@@ -1,0 +1,205 @@
+package com.vpa.view;
+/*
+// Grupo: 
+//
+// 2MSIN
+//
+// Gabriel de Sousa Leal / RA: 201202909
+//
+// Andre Pacetti Dassa / RA: 201202384
+//
+// Eduardo Américo Rodrigues Lopes / RA: 201206168
+//
+*/
+
+import java.awt.*;
+import java.awt.event.*;
+import javax.swing.*;
+import java.util.Locale;
+import java.util.ResourceBundle;
+
+public class ComprarPassagem extends JFrame implements ActionListener
+{
+   JButton comprar, voltar;
+   JLabel escolherAcento, label1, pesoBagagem,numBagagem,necessidadeEspecial,label5,crianca,label7,idaVolta,label9,formaPagamento,label11,numeroCartao,codSeguranca;
+   JTextField texto1,texto2,texto3,texto4;
+	private ResourceBundle bn = null;
+
+	public ComprarPassagem()
+	{
+      setTitle("ComprarPassagem");
+		setBounds(400,50,450,450);
+      getContentPane().setLayout(new GridLayout(0,2));
+      
+		bn = ResourceBundle.getBundle("messages", Locale.getDefault());
+      String sim = bn.getString("comprarPassagem.radioSim"), nao = bn.getString("comprarPassagem.radioNao"), debito= bn.getString("comprarPassagem.radioDebito") ,credito = bn.getString("comprarPassagem.radioCredito") ,dinheiro = bn.getString("comprarPassagem.radioDinheiro"), boleto = bn.getString("comprarPassagem.radioBoleto");
+		
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setVisible(true);
+		
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setVisible(true);
+
+	  escolherAcento = new JLabel(bn.getString("comprarPassagem.escolherAcento"));
+      label1 = new JLabel("");
+      
+      pesoBagagem = new JLabel(bn.getString("comprarPassagem.pesoBagagem"));
+      texto1 = new JTextField();
+      
+      numBagagem = new JLabel(bn.getString("comprarPassagem.numBagagem"));
+      texto2 = new JTextField();
+      
+      necessidadeEspecial = new JLabel(bn.getString("comprarPassagem.necessidadeEspecial"));
+      label5 = new JLabel("");
+      
+      JRadioButton neSim = new JRadioButton(sim);
+      neSim.setMnemonic(KeyEvent.VK_B);
+      neSim.setActionCommand(sim);
+      neSim.setSelected(true);
+      neSim.addActionListener(this);
+      
+      JRadioButton neNao = new JRadioButton(nao);
+      neNao.setMnemonic(KeyEvent.VK_B);
+      neNao.setActionCommand(nao);
+      neNao.setSelected(true);
+      neNao.addActionListener(this);
+      
+      crianca = new JLabel(bn.getString("comprarPassagem.crianca"));
+      label7 = new JLabel("");
+      
+      JRadioButton cSim = new JRadioButton(sim);
+      cSim.setMnemonic(KeyEvent.VK_B);
+      cSim.setActionCommand(sim);
+      cSim.setSelected(true);
+      cSim.addActionListener(this);
+      
+      JRadioButton cNao = new JRadioButton(nao);
+      cNao.setMnemonic(KeyEvent.VK_B);
+      cNao.setActionCommand(nao);
+      cNao.setSelected(true);
+      cNao.addActionListener(this);
+      
+      idaVolta = new JLabel(bn.getString("comprarPassagem.idaVolta"));
+      label9 = new JLabel("");
+      
+      JRadioButton ivSim = new JRadioButton(sim);
+      ivSim.setMnemonic(KeyEvent.VK_B);
+      ivSim.setActionCommand(sim);
+      ivSim.setSelected(true);
+      ivSim.addActionListener(this);
+      
+      JRadioButton ivNao = new JRadioButton(nao);
+      ivNao.setMnemonic(KeyEvent.VK_B);
+      ivNao.setActionCommand(nao);
+      ivNao.setSelected(true);
+      ivNao.addActionListener(this);
+      
+      formaPagamento = new JLabel(bn.getString("comprarPassagem.formaPagamento"));
+      label11 = new JLabel("");
+      
+      JRadioButton pDebito = new JRadioButton(debito);
+      pDebito.setMnemonic(KeyEvent.VK_B);
+      pDebito.setActionCommand(debito);
+      pDebito.setSelected(true);
+      pDebito.addActionListener(this);
+      
+      JRadioButton pCredito = new JRadioButton(credito);
+      pCredito.setMnemonic(KeyEvent.VK_B);
+      pCredito.setActionCommand(credito);
+      pCredito.setSelected(true);
+      pCredito.addActionListener(this);
+      
+      JRadioButton pDinheiro = new JRadioButton(dinheiro);
+      pDinheiro.setMnemonic(KeyEvent.VK_B);
+      pDinheiro.setActionCommand(dinheiro);
+      pDinheiro.setSelected(true);
+      pDinheiro.addActionListener(this);
+      
+      JRadioButton pBoleto = new JRadioButton(boleto);
+      pBoleto.setMnemonic(KeyEvent.VK_B);
+      pBoleto.setActionCommand(boleto);
+      pBoleto.setSelected(true);
+      pBoleto.addActionListener(this);
+      
+      numeroCartao = new JLabel(bn.getString("comprarPassagem.numeroCartao"));
+      texto3 = new JTextField();
+      
+      codSeguranca = new JLabel(bn.getString("comprarPassagem.codSeguranca"));
+      texto4 = new JTextField();
+      
+      comprar = new JButton(bn.getString("comprarPassagem.comprar"));
+      comprar.addActionListener(this);
+      
+      voltar = new JButton(bn.getString("comprarPassagem.voltar"));
+      voltar.addActionListener(this);
+      
+      ButtonGroup group0 = new ButtonGroup();
+      group0.add(neSim);
+      group0.add(neNao);
+      
+      ButtonGroup group1 = new ButtonGroup();
+      group1.add(cSim);
+      group1.add(cNao);
+      
+      ButtonGroup group2 = new ButtonGroup();
+      group2.add(ivSim);
+      group2.add(ivNao);
+      
+      ButtonGroup group3 = new ButtonGroup();
+      group3.add(neSim);
+      group3.add(neSim);
+
+      ButtonGroup group4 = new ButtonGroup();
+      group4.add(pDebito);
+      group4.add(pCredito);
+      group4.add(pDinheiro); 
+      group4.add(pBoleto);
+      
+      getContentPane().add(comprarPassagem);
+      getContentPane().add(label1);
+      getContentPane().add(pesoBagagem);
+      getContentPane().add(texto1);
+      getContentPane().add(numBagagem);
+      getContentPane().add(texto2);
+      getContentPane().add(necessidadeEspecial);
+      getContentPane().add(label5);
+      getContentPane().add(neSim);
+      getContentPane().add(neNao);
+      getContentPane().add(crianca);
+      getContentPane().add(label7);
+      getContentPane().add(cSim);
+      getContentPane().add(cNao);
+      getContentPane().add(idaVolta);
+      getContentPane().add(label9);
+      getContentPane().add(ivSim);
+      getContentPane().add(ivNao);
+      getContentPane().add(formaPagamento);
+      getContentPane().add(label11);
+      getContentPane().add(pDebito);
+      getContentPane().add(pCredito);
+      getContentPane().add(pDinheiro);
+      getContentPane().add(pBoleto);
+      getContentPane().add(numeroCartao);
+      getContentPane().add(texto3);
+      getContentPane().add(codSeguranca);
+      getContentPane().add(texto4);
+      getContentPane().add(escolherAcento);
+      getContentPane().add(voltar);
+		
+		
+	}
+	
+	public void actionPerformed(ActionEvent e)
+	{
+		if(e.getSource() == escolherAcento)
+		{
+			Poltronas p = new Poltronas();
+		}
+		
+		if(e.getSource() == voltar)
+		{
+			MenuPassagem mp = new MenuPassagem();
+			dispose();
+		}
+	}
+}

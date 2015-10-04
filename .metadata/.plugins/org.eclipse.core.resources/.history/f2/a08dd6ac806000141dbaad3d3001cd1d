@@ -1,0 +1,72 @@
+package com.vpa.view;
+
+/*
+//Grupo: 
+//
+//2MSIN
+//
+//Gabriel de Sousa Leal / RA: 201202909
+//
+//Andre Pacetti Dassa / RA: 201202384
+//
+//Eduardo Américo Rodrigues Lopes / RA: 201206168
+//
+*/
+
+import java.awt.GridLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.util.Locale;
+import java.util.ResourceBundle;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JList;
+import javax.swing.JTextArea;
+
+import com.vpa.model.ClienteDAO;
+
+public class ResultadoConsultarCliente extends JFrame implements ActionListener
+{
+	private JTextArea cliente;
+	private JButton voltar;
+	 
+	public ResultadoConsultarCliente()
+	{
+		setTitle("ConsultarCliente");
+		setBounds(300,50,300,200);
+		
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setVisible(true);
+	
+		getContentPane().setLayout(new GridLayout(0,1));
+		
+		ClienteDAO c = new ClienteDAO();
+		
+		cliente = new JTextArea();
+		cliente.setText(c.clientes());
+		
+		voltar = new JButton("Voltar Menu Passagem");
+		voltar.addActionListener(this);
+		
+		getContentPane().add(cliente);
+		getContentPane().add(voltar);
+	}
+
+	@Override
+	public void actionPerformed(ActionEvent e) 
+	{
+		if(e.getSource() == votlar)
+		{
+			new MenuPassagem();
+			dispose();
+		}
+		
+	}
+	
+	public static void main (String [] args)
+	{
+		ResultadoConsultarCliente r = new ResultadoConsultarCliente();
+	}
+	
+}
